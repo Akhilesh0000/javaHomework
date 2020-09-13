@@ -7,6 +7,12 @@ class Student {
     int sID;
     private int marks;
 
+    public Student(int sID, String name, int marks) {
+        this.sID = sID;
+        this.name = name;
+        this.setMarks(marks);
+    }
+
     public void setMarks(int sMarks) {
         if (marks < 0) {
             System.out.println("Marks must be positive");
@@ -38,9 +44,9 @@ class Student {
  */
 public class StudentDemo {
     public static void main(String[] args) {
-        Student st1 = new Student();
-        st1.name = "Lokesh";
-        st1.setMarks(90);
+        Student st1 = new Student(1, "lokesh", 90);
+        // st1.name = "Lokesh";
+        // st1.setMarks(90);
         System.out.println("Marks : " + st1.getMarks() + "\nGrade : " + st1.calGrade());
     }
 }
